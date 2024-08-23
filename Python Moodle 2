@@ -1,0 +1,53 @@
+### exercise 1
+name=input("Insert your name:")
+print("Hello,", name,"!")
+
+
+### exercise 2
+print("\n")
+radius=float(input("Insert the radius:"))
+pi=3.141
+print(pi*(radius**2))
+
+
+### exercise 3
+print("\n")
+length=float(input("Insert the length of the rectangle:"))
+width=float(input("Insert the widtth of the rectangle:"))
+print("the area of the rectangle is: \n", length*width)
+print("the perimeter of the rectangle is: \n", (length*2)+(width*2))
+
+
+### exercise 4
+print("\n")
+p=1
+s=0
+for i in range(3):
+    n=float(input("insert the number:"))
+    s=s+n
+    p=p*n
+print("the sum is:",s,"\n the product is:",p,"\nthe average is:",s/3)
+
+
+### exersize 5
+t=float(input("\nEnter talents:\n"))
+p=float(input("\nEnter pounds:\n"))
+l=float(input("\nEnter lots:\n"))
+t=t*20*32*13.3
+p=p*32*13.3
+l=l*13.3
+s=t+p+l
+print("The weight in modern units:\n",s//1000,"kilograms and",s%1000,"grams")
+
+### exercise 6
+import random
+code1=""
+code2=""
+for i in range(3):
+    a = random.randint(0, 9)
+    code1=code1+str(a)
+print("3-digit code:", code1)
+for j in range(4):
+    b = random.randint(1, 6)
+    code2=code2+str(b)
+print("4-digit code:", code2)
