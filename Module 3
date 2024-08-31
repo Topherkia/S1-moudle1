@@ -1,0 +1,55 @@
+zander_size=int(input("Insert the lenght of the zander in cm: "))
+if zander_size<42:
+    print("the size is ", 42-zander_size ," centimeters below the limit")
+else:
+    print("You're cool")
+
+
+### exercise 2
+cabin_class=input("Insert the cabin class: ")
+if cabin_class=="LUX":
+    print("You'd have an upper-deck cabin with a balcony")
+elif cabin_class=="A":
+    print("You'd have a cabin above the car deck, equipped with a window")
+elif cabin_class=="B":
+    print("You'd have a windowless cabin above the car deck")
+elif cabin_class=="C":
+    print("You'd have a windowless cabin below the car deck")
+else:
+    print("Invalid cabin class")
+
+
+### exercise 3
+Gender=input("Insert your biological gender(male/female): ")
+Hemo_value=int(input("Insert your hemoglobin value in g/l: "))
+if Gender=="male":
+    if Hemo_value>167:
+        print("Your hemoglobin value is higher than normal")
+    elif Hemo_value<134:
+        print("Your homoglobin value is lower than normal")
+    else:
+        print("You're fine")
+elif Gender=="female":
+    if Hemo_value>155:
+        print("Your hemoglobin value is higher than normal")
+    elif Hemo_value<117:
+        print("Your homoglobin value is lower than normal")
+    else:
+        print("You're fine")
+else:
+    print("invalid gender")
+
+
+### exercise 4
+yr=int(input("Insert the year: "))
+if yr%4==0:
+    if yr%100==0:
+        if yr%400==0:
+            print("It's a leap year!")
+        else:
+            print("Not a leap year")
+    else:
+        print("It's a leap year!")
+else:
+    print("Not a leap year")
+
