@@ -1,0 +1,97 @@
+### exercise 1
+i=1
+while i<=1000:
+    if i%3==0:
+        print(i)
+        i=i+1
+    else:
+        i=i+1
+
+
+### exercise 2
+x=0
+while x==0:
+    num_inch=float(input("Insert the number in inches: "))
+    if num_inch>=0:
+        print(num_inch*2.54)
+    else:
+        print("Invalid number")
+        x=x+1
+
+
+### exercise 3
+num=input("Insert the number: ")
+if num=="":
+    print("done")
+else:
+    num=int(num)
+    max_num=num
+    min_num=num
+    while num!="":
+        num=input("Insert the number: ")
+        if num=="":
+            print("done")
+        else:
+            num=int(num)
+            if num<min_num:
+                min_num=num
+            if num>max_num:
+                max_num=num
+    print("the max number is: ",max_num)
+    print("the min number is: ",min_num)
+
+
+# exercise 4
+import random
+correct_guess=random.randint(1,10)
+guess=int(input("Guess a number between 1,10: "))
+if guess==correct_guess:
+    print("Correct")
+else:
+    if guess<correct_guess:
+        print("Too low")
+    if guess>correct_guess:
+        print("Too high")
+    while guess!=correct_guess:
+        guess=int(input("Guess a number between 1,10: "))
+        if guess==correct_guess:
+            print("Correct")
+        else:
+            if guess<correct_guess:
+                print("Too low")
+            if guess>correct_guess:
+                print("Too high")
+
+
+### exercise 5
+username="python"
+password="rules"
+i=0
+while i<5:
+    u=input("Insert username:\n")
+    p=input("Insert password:\n")
+    if u==username and p==password:
+        print("welcome")
+        i=5
+    else:
+        if i<4:
+            print("Either or both of the username and password are incorrect!")
+            i=i+1
+        else:
+            print("Acces denied")
+            i=i+1
+
+
+### exercise 6
+import random
+N=int(input("How many random points do you want?"))
+n=0
+i=0
+while i<N:
+    x=random.uniform(-1,1.)
+    y=random.uniform(-1,1.)
+    if x**2+y**2<1:
+        n=n+1
+    i=i+1
+print((n/N)*4)
+
