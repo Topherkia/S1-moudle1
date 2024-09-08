@@ -1,0 +1,51 @@
+# Exercise 1
+import random
+dice_times=int(input("How many dices should i roll? "))
+sum_num=0
+for i in range(dice_times):
+    sum_num=sum_num+random.randint(1,6)
+print(sum_num)
+
+# Exercise 2
+while_stopper=0
+while_counter=0
+Lnum=[]
+while while_stopper==0:
+    num=input("Insert a number: ")
+    if num=="":
+        while_stopper=while_stopper+1
+    else:
+        num=int(num)
+        if while_counter<5:
+            Lnum.append(num)
+        else:
+            for j in range(0,5):
+                if num>Lnum[j]:
+                    Lnum.pop(j)
+                    Lnum.insert(j,num)
+                    break
+        while_counter=while_counter+1
+Lnum.sort(reverse=True)
+print(Lnum)
+
+# Exercise 3
+num=int(input("Insert a number: "))
+div=0
+for i in range(1,num+1):
+    if num%i==0:
+        div=div+1
+if div==1:
+    print("prime numbers are divisable by 2 and only 2 numbers, the number 1 is divisable by only 1!!!")
+if div==2:
+    print("It's a prime number!")
+else:
+    print("Not a prime number")
+
+# Exercise 4
+C=[]
+for i in range(5):
+    city=input("insert city name: ")
+    C.append(city)
+for j in range(5):
+    print(C[j])
+
