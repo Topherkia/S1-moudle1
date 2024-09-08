@@ -1,0 +1,70 @@
+# Exercise 1
+import random
+def diceroller():
+    dice=random.randint(1,6)
+    return dice
+while True:
+    d=diceroller()
+    print(d)
+    if d==6:
+        break
+
+# Exercise 2
+import random
+def infidice(sides):
+    dice=random.randint(1,sides)
+    return dice
+numof_sides=int(input("Insert the number of sides you want your dice to have: "))
+while True:
+    d=infidice(numof_sides)
+    print(d)
+    if d==numof_sides:
+        break
+
+# Exercise 3
+def galtolitr(g):
+    g=g*3.785
+    return g
+while True:
+    gasoline=float(input("Insert your amount of gasoline in Anmerican gallons: "))
+    if gasoline<0:
+        print("done")
+        break
+    else:
+        print("your gasoline is: ",galtolitr(gasoline),"litres")
+
+# Exercise 4
+def adder(L):
+    s=0
+    for i in range(len(L)):
+        s=s+L[i]
+    return s
+List=[12,35,7,52,1,62]
+print("My list is: ",List)
+print(adder(List))
+
+# Exercise 5
+def unevenremover(L):
+    SL=[]
+    for i in range(len(L)):
+        if L[i]%2==0:
+            SL.append(L[i])
+    return(SL)
+List=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+print("My list is:\n",List,"\n and my function-included list is:\n",unevenremover(List))
+
+# Exercise 6
+import math
+def optimal(d,p):
+    op=p/(math.pi*(d/2)**2)
+    return op
+fpiz_pr=int(input("Insert the first pizza's price in Euros: "))
+fpiz_di=int(input("Insert the first pizza's diameter: "))
+spiz_pr=int(input("Insert the second pizza's price in Euros: "))
+spiz_di=int(input("Insert the second pizza's diameter: "))
+if optimal(fpiz_di,fpiz_pr)>optimal(spiz_di,spiz_pr):
+    print("The second pizza provides nbbetter value for money")
+if optimal(fpiz_di,fpiz_pr)<optimal(spiz_di,spiz_pr):
+    print("The first pizza provides nbbetter value for money")
+if optimal(fpiz_di,fpiz_pr)==optimal(spiz_di,spiz_pr):
+    print("Both pizzas are good!")
